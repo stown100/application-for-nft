@@ -1,0 +1,28 @@
+@import url('../src/vendor/normalize.css');
+@import url('../src/fonts/fonts.css');
+
+
+
+.App {
+  background-color: #000000;
+  color: #FFFFFF;
+  /* background: linear-gradient(rgba(6, 219, 172, 1), rgba(38, 3, 251, 1), rgba(3, 251, 117, 1), rgba(112, 0, 255, 1), rgba(251, 3, 245, 1)); */
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.anchor {
+  margin: 0;
+  padding: 0;
+}
+
+@import url('./components/Preloader/Preloader.css');
+@import url('./components/Header/header.css');
+@import url('./components/Main/main.css');
+@import url('./components/Main/first.css');
+@import url('./components/Main/second.css');
+@import url('./components/Main/marketplace.css');
+@import url('./components/Main/community-info.css');
+@import url('./components/Cards/cards-block.css');
+@import url('./components/Footer/footer.css');

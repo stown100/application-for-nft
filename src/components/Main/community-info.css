@@ -1,0 +1,33 @@
+.community-info {
+    background-color: #000000;
+    padding: 0 40px 151px;
+}
+
+.community-info-blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.community-info__title {
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 97px;
+    max-width: 857px;
+    margin-bottom: 80px;
+    margin-top: 0;
+}
+
+.community-info-block__title {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 160%;
+    margin-bottom: 16px;
+}
+
+.community-info-block__text {
+    max-width: 412px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 160%;
+    margin: 0;
+}

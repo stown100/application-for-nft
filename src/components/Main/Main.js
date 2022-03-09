@@ -9,6 +9,7 @@ import music1 from '../../images/music1.png'
 import music2 from '../../images/music2.png'
 import music3 from '../../images/music3.png'
 import music4 from '../../images/music4.png'
+import CardsSection from '../Cards/CardsSection';
 
 
 function Main() {
@@ -29,7 +30,11 @@ function Main() {
                             <h6 className='info-solana__title'>Powered by</h6>
                             <img className='info-solana__img' src={solana} alt='solana' />
                         </div>
-                        <button className='info__button'>Discover More<img className='button__arrow' src={arrow} alt="arrow" /></button>
+                        <button className='info__button'>
+                            <a className='button__link' href='https://opensea.io/collection/music-for-nft-creators' target='_blank'>
+                                Discover More<img className='button__arrow' src={arrow} alt="arrow" />
+                            </a>
+                        </button>
                     </div>
                 </div>
                 <img className='first-img' src={imageTitle} alt='head' />
@@ -95,7 +100,11 @@ function Main() {
                         Create music and music videos just under the $1, the platform works with BSC blockchain and supports mp4.
                         With AirNFTs, you are getting the control over your NFTs, no middle man cutting your sales.
                         Create, Buy, Sell and Earn with your music NFTs.</p>
-                    <button className='marketplace-text__button'>Explore Marketplace<img className='button__arrow' src={arrow} alt="arrow" /></button>
+                    <button className='marketplace-text__button'>
+                        <a className='button__link' href='https://nftblackmarket.io/market-music/' target='_blank'>
+                            Explore Marketplace<img className='button__arrow' src={arrow} alt="arrow" />
+                        </a>
+                    </button>
                 </div>
             </div>
             <p className='anchor'><a name="About" /></p>
@@ -125,7 +134,7 @@ function Main() {
                     </div>
                 </div>
             </div>
-
+            <CardsSection />
         </div>
     )
 }

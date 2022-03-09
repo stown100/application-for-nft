@@ -17,6 +17,11 @@
   padding: 0;
 }
 
+.button__link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 @import url('./components/Preloader/Preloader.css');
 @import url('./components/Header/header.css');
 @import url('./components/Main/main.css');

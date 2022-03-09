@@ -3,7 +3,7 @@ import Card from './Card';
 import Preloader from '../Preloader/Preloader';
 import vector from '../../images/Vector.svg'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCards } from '../../redux/actions/cards';
+import { addFetchCards, fetchCards } from '../../redux/actions/cards';
 import Genres from '../Genres/Genres';
 import { setGenres } from '../../redux/actions/filters';
 
@@ -21,14 +21,24 @@ function CardsSection() {
     const isLoaded = useSelector(({ cards }) => cards.isLoaded);
     const { genre } = useSelector(({ filters }) => filters);
 
+    const visible = cards.slice(0, 6)
+    // const [index, setIndex] = React.useState(0);
+    // const arr = cards.slice(0, 6 + index)
+
+
     React.useEffect(() => {
         dispatch(fetchCards(genre))
     }, [genre]);
 
-      // useCollback 1 раз запоминает ссылку на пропсы и больше не производит лишний рендер
-  const onSelectGenres = React.useCallback((index) => {
-    dispatch(setGenres(index))
-  }, []);
+    // // Открыть ещё 4 карточки
+    const handlerAddMovies = () => {
+        dispatch(addFetchCards(genre))
+    }
+
+    // useCollback 1 раз запоминает ссылку на пропсы и больше не производит лишний рендер
+    const onSelectGenres = React.useCallback((index) => {
+        dispatch(setGenres(index))
+    }, []);
 
     return (
         <div className='cards'>
@@ -47,7 +57,7 @@ function CardsSection() {
                     : Array(12).fill(0).map((item, index) => <Preloader key={index} />)
                 }
             </div>
-            <button className='cards__button'>Discover More Music NFT<img className='button__arrow' src={vector} alt='arrow' /></button>
+            <button onClick={handlerAddMovies} className='cards__button'>Discover More Music NFT<img className='button__arrow' src={vector} alt='arrow' /></button>
         </div>
     )
 }

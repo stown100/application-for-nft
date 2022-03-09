@@ -2,14 +2,14 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #FFFFFF;
-    /* width: 94.444%; */
+    width: 94.444%;
     padding: 0 41px;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(50px);
     align-items: center;
     position: fixed;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .header__logo {
